@@ -1,0 +1,31 @@
+version: '3.5'
+
+services:
+  node_app:
+    container_name: nodeApp
+    build: .
+    ports:
+      - '3000:3000'
+    networks:
+      - node_connect
+    volumes:
+      - './node_modules:/app/node_modules'
+      - '.:/app'
+    restart: always
+
+  node_server:
+    container_name: nodeServer
+    image: 'nginx:1.21.3-alpine'
+    ports:
+      - '3005:80'
+    networks:
+      - node_connect
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - node_app
+
+networks:
+  node_connect:
+    driver: bridge
