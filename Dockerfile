@@ -1,12 +1,10 @@
 FROM node:lts-alpine
 
-LABEL Benjamin Iduwe
-
 WORKDIR /app
 
 COPY . .
+COPY package.*json .
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 RUN yarn 
 

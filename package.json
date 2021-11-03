@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec node app.js"
+    "start": "pm2-runtime start app.js",
+    "dev": "nodemon --exec node app.js"
   },
   "keywords": [],
   "author": "",
