@@ -1,5 +1,8 @@
 This project is sample project that implements serving Nodejs using a load balancer and Docker.
 
+### Requirements
+- Docker
+
 ### Installation
 - Run git clone
 - Run cd to node-engine-x

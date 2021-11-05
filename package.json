@@ -8,7 +8,7 @@
     "dev": "nodemon --exec node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Benjamin Iduwe",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
