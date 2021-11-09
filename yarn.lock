@@ -1640,6 +1640,13 @@ resolve@^1.12.0:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
+response-transformer@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/response-transformer/-/response-transformer-0.6.0.tgz#cd7183b41afaf028ddea6e63772732d7b216093c"
+  integrity sha512-VFyueVrhHq5gNBWaysTSKJfd/phxjFCUn076LKxNHbQ23uVVvwht/v5rP/ZOepaN9XRLQVPWdLwabxR6y6COeQ==
+  dependencies:
+    express "^4.17.1"
+
 responselike@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/responselike/-/responselike-1.0.2.tgz#918720ef3b631c5642be068f15ade5a46f4ba1e7"

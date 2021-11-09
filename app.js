@@ -1,8 +1,16 @@
 const express = require('express');
-const app = express();
-const port = 3000;
+const { okResponse, badRequestResponse } = require('response-transformer');
 
-app.get('/', (req, res) => res.json('Hello World!'));
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => okResponse(res, 'Hello world'));
+
+app.get('/error', (req, res) =>
+  badRequestResponse(res, 'An error occurred', {
+    reason: 'The request was malformed',
+  }),
+);
 
 app.get('/heavy', (req, res) => {
   let counter = 0;
