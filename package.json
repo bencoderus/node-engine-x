@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "pm2-runtime start app.js -i 0 --name nodeApp",
+    "start:prod": "pm2 start app.js -i 0 --name nodeApp",
     "dev": "nodemon --exec node app.js"
   },
   "keywords": [],
